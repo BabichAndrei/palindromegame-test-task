@@ -15,5 +15,6 @@ public class Main {
         palindromeGame.play(player2, "aaaaaa");
         palindromeGame.play(player1, "wwwww");
 
+        leaderboard.getLeaderboard();
     }
 }

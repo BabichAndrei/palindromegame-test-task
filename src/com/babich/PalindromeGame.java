@@ -18,7 +18,6 @@ public class PalindromeGame {
                 leaderboard.updateLeaderboard(player);
             }
         }
-
     }
 
     private int getPointsFromPalindrome(String str) {
