@@ -9,10 +9,10 @@ public class PalindromeGame {
     }
 
     public void play(Player player, String str) {
-        int points;
-
         if (!player.getUsedPalindromes().contains(str)) {
-            if ((points = getPointsFromPalindrome(str)) > 0) {
+            int points = getPointsFromPalindrome(str);
+
+            if (points > 0) {
                 player.setPoints(player.getPoints() + points);
                 player.getUsedPalindromes().add(str);
                 leaderboard.updateLeaderboard(player);
@@ -21,16 +21,12 @@ public class PalindromeGame {
     }
 
     private int getPointsFromPalindrome(String str) {
-        String[] chars = str.toLowerCase().split("");
-
-        for (int i = 0; i < chars.length; i++) {
-            if (!(chars[i].equals(chars[chars.length - i - 1]))) {
+        for (int i = 0; i < str.length() / 2; i++) {
+            if (!(str.charAt(i) == (str.charAt(str.length() - 1)))) {
                 return 0;
             }
         }
 
-        return chars.length;
+        return str.length();
     }
-
-
 }

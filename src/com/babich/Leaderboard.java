@@ -6,10 +6,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-@Data
 public class Leaderboard implements ILeaderboard {
 
-    private List<Player> playerList = new ArrayList<>();
+    private final List<Player> playerList = new ArrayList<>();
 
     public void getLeaderboard() {
         playerList
