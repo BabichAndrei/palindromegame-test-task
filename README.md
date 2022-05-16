@@ -10,7 +10,7 @@
 
 Возможность игры через консоль не реализован. Сыграть в игру можно реализовав в классе Main следующий код
 ```
-ILeaderboard leaderboard = new Leaderboard();
+        ILeaderboard leaderboard = new Leaderboard();
         PalindromeGame palindromeGame = new PalindromeGame(leaderboard);
 
         Player player = new Player("Andrey");
